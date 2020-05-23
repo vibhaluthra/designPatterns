@@ -15,9 +15,9 @@ Design participants
 The memento pattern has three participants.
 
 ## Design participant
-1. Originator – is the object that knows how to create and save it’s state for future. It provides methods createMemento() and restore(memento).*Article is the orginator*.
-2. Caretaker – performs an operation on the Originator while having the possibility to rollback. It keeps track of multiple mementos. Caretaker class refers to the Originator class for saving (createMemento()) and restoring (restore(memento)) originator’s internal state.*Main is the Caretaker.*
-3. Memento – the lock box that is written and read by the Originator, and shepherded by the Caretaker. In principle, a memento must be in immutable object so that no one can change it’s state once created.*ArtcleMemento is the memento. It is a final class and also its variables are also final. It is necessary to create a constructor for all the final variables so that they can have a default value*.
+1. Originator – is the object that knows how to create and save it’s state for future. It provides methods createMemento() and restore(memento).** *Article is the orginator*. **
+2. Caretaker – performs an operation on the Originator while having the possibility to rollback. It keeps track of multiple mementos. Caretaker class refers to the Originator class for saving (createMemento()) and restoring (restore(memento)) originator’s internal state.** *Main is the Caretaker.* **
+3. Memento – the lock box that is written and read by the Originator, and shepherded by the Caretaker. In principle, a memento must be in immutable object so that no one can change it’s state once created.** *ArtcleMemento is the memento. It is a final class and also its variables are also final. It is necessary to create a constructor for all the final variables so that they can have a default value*. **
 
 # FAQ
 * The biggest advantage is that you can always discard the unwanted changes and restore it to an intended or stable state.
